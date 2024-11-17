@@ -1,0 +1,107 @@
+/* General Reset */
+body, html {
+  margin: 0;
+  margin-top: 20px;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9; /* Light background for a minimal look */
+  color: #333; /* Subtle text color */
+}
+
+/* Header Section */
+.header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+}
+
+.header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #444; /* Darker title color for emphasis */
+}
+
+.header p {
+  font-size: 1rem;
+  color: #666; /* Lighter description text */
+}
+
+/* Form Container */
+.container {
+  display: flex;
+  flex-direction: column; /* Stack form and result vertically */
+  align-items: center;
+  margin-top: 40px; /* Reduced for better spacing */
+}
+
+/* Weather Form */
+.weather-form {
+  display: flex;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px; /* Add spacing between form and result */
+}
+
+/* Search Input */
+.search-input {
+  flex: 1;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+  background-color: #f7f7f7;
+  color: #555;
+  transition: background-color 0.3s ease;
+}
+
+.search-input:focus {
+  background-color: #fff; /* Highlight on focus */
+}
+
+/* Search Button */
+.search-button {
+  padding: 0.8rem 1rem;
+  background-color: #333;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #444; /* Slight hover effect */
+}
+
+/* Weather Result */
+.weather-result {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center; /* Center-align content */
+}
+
+.weather-result h2 {
+  font-size: 1.5rem;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+
+.weather-result p {
+  font-size: 1rem;
+  color: #555;
+  margin: 0.5rem 0;
+}
