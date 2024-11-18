@@ -105,3 +105,27 @@ body, html {
   color: #555;
   margin: 0.5rem 0;
 }
+
+
+.flash-messages {
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.flash-message {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.flash-message.error {
+  background-color: #f44336; /* Red for errors */
+}
+
+.flash-message.success {
+  background-color: #4caf50; /* Green for success */
+}

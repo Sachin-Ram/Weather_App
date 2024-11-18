@@ -23,11 +23,11 @@ class weather_services:
     
     def get_weather(self):
 
-        lat_long_data=self.get_lat_long()
+        # lat_long_data=self.get_lat_long()
 
-        latitude=lat_long_data[0]["lon"]
+        # latitude=lat_long_data[0]["lon"]
 
-        longitude=lat_long_data[0]["lat"]
+        # longitude=lat_long_data[0]["lat"]
 
         
         weather_data=requests.get("https://api.openweathermap.org/data/2.5/weather?q={}&units=metric&appid={}".format(self.city,self.api_key))

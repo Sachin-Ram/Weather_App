@@ -15,7 +15,19 @@
     </header>
 
     <main class="container">
-        <form class="weather-form" method="get">
+
+
+        {% with messages = get_flashed_messages(with_categories=true)%}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for categories , mess in messages %}
+                    <div class="flash-message {{categories}}">{{mess}}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        <form class="weather-form" method="GET">
             <input type="search" name="city" placeholder="Enter city name..." required class="search-input">
             <button type="submit" class="search-button">Search</button>
         </form>
