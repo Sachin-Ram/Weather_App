@@ -1,9 +1,10 @@
 #model test files
-env/
 model/
 
 
-#venv 
+#venv
+env/
+
 .env
 
 # Python cache files

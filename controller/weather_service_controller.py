@@ -4,13 +4,19 @@ from services.weather_services import weather_services
 
 weather_endpoint=Blueprint("weather",__name__,template_folder="templates")
 
-@weather_endpoint.route('/')
+@weather_endpoint.route('/',methods=["GET", "POST"])
 
 def func():
 
-    city=request.args.get("city")
+    city=request.form.get("city")
+    print(city)
 
-    if request.method=="GET" and not city:
+    if request.method == "GET" and not city:
+        
+        flash("Enter a City Name","success")
+        return render_template("index.html") 
+
+    if request.method=="POST" and not city :
 
         flash("city name is required","error")
 
@@ -20,13 +26,12 @@ def func():
 
         data=weather_services(city)
 
-
         response=data.get_weather()
 
 
         if "main" not in response:
             flash("Weather data not available. Please check the city name.", "error")
-            return render_template("index.html", weather_data=None)
+            return render_template("index.html", weather_data="")
 
         if "weather" not in response:
             flash("Weather description not found. Please try again later.", "error")
