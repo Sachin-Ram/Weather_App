@@ -10,8 +10,8 @@
 
 <body>
     <header class="header">
-        <h1>Weather Finder</h1>
-        <p>Get accurate weather updates for your city.</p>
+        <h1>Forecastly</h1>
+        <p>Discover the Weather in Your City Instantly – Accurate Updates, Anytime!</p>
     </header>
 
     <main class="container">
@@ -37,6 +37,7 @@
                 <h2>Weather in {{weather_data.city}}</h2>
                 <p>Temperature : {{weather_data.temperature}} °C </p>
                 <p>condition : {{weather_data.description}} </p>
+                <p>Wind Speed: {{ weather_data.wind_speed }}%</p>
             </div>
         {% endif %}
     </main>

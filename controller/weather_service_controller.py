@@ -14,6 +14,7 @@ def func():
     if request.method == "GET" and not city:
         
         flash("Enter a City Name","success")
+
         return render_template("index.html") 
 
     if request.method=="POST" and not city :
@@ -41,9 +42,11 @@ def func():
             "city": response["name"],
             "temperature": round(response["main"]["temp"]),  # Convert Kelvin to Celsius
             "description": response["weather"][0]["description"],
-            "country": response["sys"]["country"],
+            # "country": response["sys"]["country"],
+            "wind_speed": response["wind"]["speed"],
+            # "rain": response.get("rain", {}).get("1h", 0),
         }
-        flash("data fetched","success")
+        flash("Data fetched","success")
         return render_template("index.html",weather_data=weather_data)
     
     except Exception as e:
